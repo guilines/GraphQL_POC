@@ -1,0 +1,5 @@
+/.idea/
+/frontend/graphql.schema.json
+/frontend/src/generated/
+/intro-graphQL-presentation.iml
+/frontend/storybook.log

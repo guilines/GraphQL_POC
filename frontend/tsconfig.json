@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "jsx": "react",
+    "outDir": "dist/types",
+    "strict": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "paths": {
+      "~/storybook/*": [".storybook/*"],
+      "~/clientState/*": ["src/clientState/*"],
+      "~/components/*": ["src/components/*"],
+      "~/pages/*": ["src/pages/*"],
+      "~/mocks/*": ["src/mocks/*"],
+      "~/testUtils/*": ["src/testUtils/*"],
+      "~/generated/*": ["src/generated/*"],
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*.docs.mdx"]
+}
