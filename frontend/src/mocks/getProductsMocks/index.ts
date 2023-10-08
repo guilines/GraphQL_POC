@@ -26,13 +26,14 @@ export const getProductsMocks = {
         query: GET_PRODUCTS_QUERY,
     },
     result: {
-        data: [
-            productBuilder(1),
-            productBuilder(2),
-            productBuilder(3),
-            productBuilder(4),
-            productBuilder(5),
-        ]
+        data: {
+            getProducts: [
+                productBuilder(1),
+                productBuilder(2),
+                productBuilder(3),
+                productBuilder(4),
+                productBuilder(5),
+            ]
+        }
     },
-
 }

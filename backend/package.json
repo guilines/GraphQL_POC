@@ -1,6 +1,26 @@
 {
   "name": "intro-graphQL-presentation-backend",
   "version": "1.0.0",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "generate": "graphql-codegen --config codegen.ts",
+    "start": "npm run compile && node --experimental-specifier-resolution=node ./dist/server.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node-esm' --experimental-specifier-resolution=node src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
+    "@apollo/server": "^4.9.4",
+    "graphql": "^16.8.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@types/node": "^20.8.3",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }

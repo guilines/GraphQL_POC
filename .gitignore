@@ -3,3 +3,5 @@
 /frontend/src/generated/
 /intro-graphQL-presentation.iml
 /frontend/storybook.log
+/backend/dist/
+/backend/node_modules/
