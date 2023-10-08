@@ -11,7 +11,7 @@ interface GetProductsQueryData {
 export const useGetProductsQuery = (): GetProductsQueryData => {
   const {data, error, loading} = useQuery(GET_PRODUCTS_QUERY);
   return {
-    data,
+    data: data ?? [],
     loading,
     error,
   }
