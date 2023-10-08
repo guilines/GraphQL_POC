@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "~/storybook/*": [".storybook/*"],
+      "~/clientState/*": ["./src/clientState/*"],
+      "~/components/*": ["./src/components/*"],
+      "~/containers/*": ["./src/containers/*"],
+      "~/pages/*": ["./src/pages/*"],
+      "~/mocks/*": ["./src/mocks/*"],
+      "~/testUtils/*": ["./src/testUtils/*"],
+      "~/generated/*": ["./src/generated/*"]
+    }
+  }
+}

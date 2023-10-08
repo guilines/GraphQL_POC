@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -15,17 +16,7 @@
     "skipLibCheck": true,
     "preserveWatchOutput": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./",
     "resolveJsonModule": true,
-    "paths": {
-      "~/storybook/*": [".storybook/*"],
-      "~/clientState/*": ["src/clientState/*"],
-      "~/components/*": ["src/components/*"],
-      "~/pages/*": ["src/pages/*"],
-      "~/mocks/*": ["src/mocks/*"],
-      "~/testUtils/*": ["src/testUtils/*"],
-      "~/generated/*": ["src/generated/*"],
-    }
   },
   "include": ["src/**/*"],
   "exclude": ["**/*.docs.mdx"]

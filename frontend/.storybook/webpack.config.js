@@ -13,10 +13,11 @@ module.exports = ({ config }) => {
       alias: {
         "~/": path.resolve(__dirname, "../"),
         "~/components": path.resolve(__dirname, "../src/components"),
+        "~/containers": path.resolve(__dirname, "../src/containers"),
+        "~/pages": path.resolve(__dirname, "../src/pages"),
         "~/clientState": path.resolve(__dirname, "../src/clientState"),
         "~/mocks": path.resolve(__dirname, "../src/mocks"),
         "~/storybook": path.resolve(__dirname, "./"),
-        "~/pages": path.resolve(__dirname, "../src/pages"),
         "~/generated": path.resolve(__dirname, "../src/generated"),
         react: path.resolve("node_modules/react"),
         "react-dom": path.resolve(__dirname, "../node_modules/react-dom"),

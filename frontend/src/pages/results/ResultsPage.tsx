@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import ProductsView from "../../containers/ProductsView";
+import ProductsView from "~/containers/ProductsView";
 
 const ResultsPage: FC = () => {
     return (
