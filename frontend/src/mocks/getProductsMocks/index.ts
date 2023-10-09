@@ -4,7 +4,7 @@ import {GET_PRODUCTS_QUERY} from "~/clientState/operations/getProducts";
 const productBuilder = (index: number): Product => ({
     id: `${index}`,
     details: {
-        title: `Product ${index}`,
+        title: `Product_${index}`,
         description: `Product ${index} description`,
         price: {
             originalAmount: index*100,
@@ -21,7 +21,7 @@ const productBuilder = (index: number): Product => ({
     comments: [],
 });
 
-export const getProductsMocks = {
+export const getProductsMocks = [{
     request: {
         query: GET_PRODUCTS_QUERY,
     },
@@ -36,4 +36,4 @@ export const getProductsMocks = {
             ]
         }
     },
-}
+}]

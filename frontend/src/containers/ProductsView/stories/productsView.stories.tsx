@@ -7,9 +7,7 @@ export default {
     parameters: {
         layout: 'centered',
         apolloClient: {
-            mocks: [
-                getProductsMocks,
-            ],
+            mocks: getProductsMocks,
         }
     },
     tags: ['autodocs'],
