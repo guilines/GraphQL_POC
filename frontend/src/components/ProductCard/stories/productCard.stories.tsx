@@ -1,5 +1,6 @@
 import ProductCard from "~/components/ProductCard";
 import React from "react";
+import { StoryObj } from "@storybook/react";
 
 export default {
   title: "Components/ProductCard",
@@ -13,7 +14,7 @@ export default {
   },
 };
 
-export const Default = (args) => <ProductCard {...args} />;
+export const Default: StoryObj = (args) => <ProductCard {...args} />;
 Default.args = {
   details: {
     title: "Title",

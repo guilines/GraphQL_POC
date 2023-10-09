@@ -1,5 +1,3 @@
-dist
-esm
 build
 coverage
 node_modules

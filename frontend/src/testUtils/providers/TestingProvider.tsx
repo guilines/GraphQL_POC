@@ -2,7 +2,7 @@ import React, { FC, PropsWithChildren } from "react";
 import { MockedProvider, MockedResponse } from "@apollo/client/testing";
 
 interface TestingProviderProps {
-  mocks?: MockedResponse<Record<string, any>, Record<string, any>>[];
+  mocks?: Array<MockedResponse>;
 }
 
 const TestingProvider: FC<PropsWithChildren<TestingProviderProps>> = ({

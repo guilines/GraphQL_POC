@@ -11,7 +11,7 @@ const productBuilder = (index: number): Product => ({
       discountedAmount: index * 90,
     },
     image: {
-      href: `https://picsum.photos/200`,
+      href: "https://picsum.photos/200",
     },
     rating: {
       numerator: index < 6 ? index : 5,

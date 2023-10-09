@@ -1,0 +1,78 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "react-app",
+    "plugin:jest-dom/recommended",
+    "eslint:recommended",
+    "plugin:storybook/recommended",
+    "plugin:storybook/csf"
+  ],
+  "plugins": [
+    "simple-import-sort",
+    "import",
+    "react",
+    "react-hooks",
+    "jest-dom",
+    "testing-library"
+  ],
+  "ignorePatterns": ["src/generated/*.js", "src/generated/*.tsx"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-unused-vars": 2,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 2,
+    "no-duplicate-imports": 2,
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "jsx-quotes": ["error", "prefer-double"],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "always", "children": "never" }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/no-unstable-nested-components": [
+      "warn",
+      {
+        "allowAsProps": true,
+        "customValidators": []
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      },
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowTypedFunctionExpressions": true
+          }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": 0,
+        "import/no-anonymous-default-export": 0,
+        "@typescript-eslint/no-unused-vars": ["error"]
+      }
+    },
+    {
+      "files": ["*.stories.js"]
+    }
+  ]
+}

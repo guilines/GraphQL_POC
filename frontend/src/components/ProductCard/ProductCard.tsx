@@ -7,10 +7,10 @@ const ProductCard: FC<ProductCardType> = ({ details }) => {
     <Card sx={{ width: 345 }}>
       <CardMedia sx={{ height: 140 }} image={details.image.href} />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant={"h5"} component={"div"}>
           {details.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant={"body2"} color={"text.secondary"}>
           {details.description}
         </Typography>
       </CardContent>
