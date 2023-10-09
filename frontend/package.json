@@ -26,7 +26,12 @@
     "eject": "craco eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "codegen": "graphql-codegen --config codegen.ts"
+    "codegen": "graphql-codegen --config codegen.ts",
+    "eslint": "eslint src --ext .js,.ts,.tsx",
+    "format": "run-s format:prettier format:eslint",
+    "format:eslint": "eslint src --ext .js,.ts,.tsx --fix",
+    "format:prettier": "prettier --write \"src/**/*.js\" \".storybook/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "format:check": "prettier --list-different \"src/**/*.js\" \".storybook/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\""
   },
   "eslintConfig": {
     "extends": [
@@ -65,7 +70,10 @@
     "@storybook/testing-library": "^0.2.2",
     "babel-plugin-named-exports-order": "^0.0.2",
     "craco-alias": "^3.0.1",
+    "eslint": "8.51.0",
     "eslint-plugin-storybook": "^0.6.14",
+    "npm-run-all": "^4.1.5",
+    "prettier": "3.0.3",
     "prop-types": "^15.8.1",
     "storybook": "^7.4.6",
     "storybook-addon-apollo-client": "^5.0.0",

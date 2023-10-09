@@ -7,9 +7,9 @@ const config = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
-    '@storybook/preset-typescript',
+    "@storybook/preset-typescript",
     "storybook-addon-apollo-client",
-      "@storybook/addon-themes",
+    "@storybook/addon-themes",
   ],
   framework: {
     name: "@storybook/react-webpack5",

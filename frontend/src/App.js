@@ -3,9 +3,9 @@ import ResultsPage from "./pages/results";
 
 function App() {
   return (
-      <GraphQLProvider>
-        <ResultsPage />
-      </GraphQLProvider>
+    <GraphQLProvider>
+      <ResultsPage />
+    </GraphQLProvider>
   );
 }
 
