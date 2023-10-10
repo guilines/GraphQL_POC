@@ -22,7 +22,7 @@ npm start
 ```
 npm run storybook
 ```
-### Backed
+### Backend
 #### Init
 ```
 cd backend
