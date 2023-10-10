@@ -5,22 +5,39 @@
   "type": "module",
   "scripts": {
     "compile": "tsc",
-    "generate": "graphql-codegen --config codegen.ts",
-    "start": "npm run compile && node --experimental-specifier-resolution=node ./dist/server.js",
+    "generate": "graphql-codegen --config codegen.yml -e",
+    "start": "npm run compile && node --experimental-loader ./loader.js ./dist/server.js",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node-esm' --experimental-specifier-resolution=node src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src --ext .js,.ts,.tsx",
+    "format": "run-s format:prettier format:eslint",
+    "format:eslint": "eslint src --ext .js,.ts,.tsx --fix",
+    "format:prettier": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --list-different \"src/**/*.ts\""
   },
   "dependencies": {
     "@apollo/server": "^4.9.4",
-    "graphql": "^16.8.1"
+    "graphql": "^16.8.1",
+    "npm-run-all": "^4.1.5",
+    "resolve": "^1.22.1"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/typescript": "^4.0.1",
     "@graphql-codegen/typescript-resolvers": "^4.0.1",
     "@types/node": "^20.8.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "esbuild": "^0.14.47",
+    "eslint": "^8.51.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "engines": {
+    "npm": ">=10.1.0",
+    "node": ">=20.8.0"
   }
 }

@@ -1,1 +1,1 @@
-export {default} from './getProductsQueryResolver';
+export { default } from "./getProductsQueryResolver";
