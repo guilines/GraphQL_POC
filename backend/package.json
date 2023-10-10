@@ -1,5 +1,5 @@
 {
-  "name": "intro-graphQL-presentation-backend",
+  "name": "graphql-poc-backend",
   "version": "1.0.0",
   "main": "dist/server.js",
   "type": "module",
